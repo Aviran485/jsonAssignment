@@ -1,10 +1,28 @@
+
+/**
+ *  @file task7.js
+ * 
+ * Authors:
+ * @author Aviran Amormin
+ * @author Natalia Akulov
+ * 
+ * Description:
+ * A script to read user information from a JSON file, count the total number of users, 
+ * and extract user names into separate text files. 
+ * 
+ * Two files will be created:
+ *    - user_count.txt - Contains the total number of users.
+ *    - user_names.txt - Contains a list of all user names.
+ */
+
+// File system module for reading/writing files
 const fs = require('fs');
 
 // read the JSON file
 const usersFile = 'users.json';
 const usersData = JSON.parse(fs.readFileSync(usersFile, 'utf8'));
 
-// count numof users
+// count num of users
 const userCount = usersData.length;
 
 // get all user names
